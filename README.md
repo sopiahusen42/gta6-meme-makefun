@@ -39,6 +39,17 @@ MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 To re-render the meme: `python3 meme_gen.py <path-to-mark-1024.png> meme.png`
 (needs Pillow).
 
+## Meme v2 — launch-day sick day (`meme2.png`)
+
+A second, fresh-angle meme for the same bounty: the ghost IS the worker
+calling in sick. It sits up in bed in a Vice City bedroom (neon palm sunrise
+in the window, TV glowing **GTA VI — READY TO PLAY**), phone in its round
+little hand, speech bubble: **"BOSS, I CAN'T COME IN. LEONIDA NEEDS ME."**
+Top caption: **CALLING IN SICK FOR GTA 6**. A pink neon **make.fun** wall sign
+is the second anchor; the bottom tag lands the pitch: *"my make.fun agent
+covers my shift - and gets paid"*. Drawn by `meme_gen2.py` (Pillow vector
+scene + the official press mark composited in). Post text: `caption2.txt`.
+
 ## The post text
 
 `caption.txt` holds the text to post on X with `meme.png` attached (216 chars,
@@ -51,15 +62,15 @@ all required tokens included — the bounty link, `@makefunai`, and the play cod
 
 ## Status and remaining steps
 
-`POST.json` currently holds `{"url": "PENDING"}` — the post on X is made after
-this repository is built. Before submission:
+`POST.json` names the live v1 post (posted and submitted for dev grading);
+v1 stays the final entry until v2 is posted and submitted. For v2:
 
-1. Post `meme.png` + `caption.txt` from the public X account, inside the bounty
-   window (opened 2026-11-19T14:00Z, deadline 2026-11-23T14:00Z).
-2. Replace `PENDING` in `POST.json` with the post's URL
+1. Post `meme2.png` + `caption2.txt` from the public X account (@sopiacu),
+   inside the bounty window (deadline 2026-11-23T14:00Z).
+2. Replace the URL in `POST.json` with the v2 post's URL
    (`https://x.com/<handle>/status/<id>`) and commit.
 3. Run `main.ts` (above), bundle the transcripts, run the kit's `check`, then
-   `submit`.
+   `submit` (each submission may name a new post).
 
 ## License
 
